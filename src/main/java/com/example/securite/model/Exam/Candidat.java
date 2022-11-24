@@ -14,9 +14,6 @@ import javax.persistence.Table;
 
 
 
-
-
-
 @Entity
 @Table(name = "candidat")
 public class Candidat {
@@ -45,11 +42,7 @@ private List<Test> tests;
 private Test test;
 
 
-/* 
-@OneToOne(fetch = FetchType.LAZY,
-cascade =  CascadeType.ALL,
-mappedBy = "candidat")
-private Commentaire commentaire; */
+
 
 
 
@@ -110,11 +103,29 @@ public Test getTest() {
 public void setTest(Test test) {
     this.test = test;
 }
+    
+    public Candidat() {
+    
+    }
 
-public Candidat() {
-    super();
-    // TODO Auto-generated constructor stub
+public Candidat(Long id, String first_name, String second_name, String email, Test test) {
+ 
+    this.id = id;
+    this.first_name = first_name;
+    this.second_name = second_name;
+    this.email = email;
+    this.test = test;
 }
+
+    public Candidat( String first_name, String second_name) {
+     
+        this.first_name = first_name;
+        this.second_name = second_name;
+    
+     
+    }
+
+
 }
 
     

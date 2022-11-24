@@ -42,7 +42,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
            " /api/langage/**",
            "/api/email/**",
            "/api/quest/**",
-           "/users/**"
+           "/users/**",
+           "api/ca/**"
            
     };
 
